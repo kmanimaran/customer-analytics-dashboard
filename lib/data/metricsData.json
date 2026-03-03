@@ -1,0 +1,546 @@
+{
+  "categories": [
+    {
+      "id": "already-available",
+      "name": "Already in Dashboard",
+      "description": "Metrics currently available with live data",
+      "dataStatus": "available",
+      "priority": 1,
+      "icon": "✓",
+      "metrics": [
+        {
+          "id": "access-methods",
+          "question": "How do customers access the insights from each of the products (FFR, plaque, roadmap)?",
+          "categoryId": "already-available",
+          "dataStatus": "available",
+          "currentValue": "Via PDF 62%, Interactive UI 38%",
+          "isMockData": false,
+          "visualizationType": "donut-chart",
+          "metadata": {
+            "unit": "percentage",
+            "trend": "stable",
+            "lastUpdated": "2026-03-01",
+            "notes": "Aaron has this data"
+          },
+          "chartData": [
+            { "date": "PDF Reports", "value": 62, "label": "PDF" },
+            { "date": "Interactive UI", "value": 38, "label": "UI" }
+          ],
+          "description": "Distribution of access methods across all products"
+        },
+        {
+          "id": "access-correlation",
+          "question": "Does the way they access our insights correlate with utilization of that product?",
+          "categoryId": "already-available",
+          "dataStatus": "available",
+          "currentValue": "Yes, UI users show 2.3x higher utilization",
+          "isMockData": false,
+          "visualizationType": "bar-chart",
+          "metadata": {
+            "unit": "correlation",
+            "trend": "up",
+            "lastUpdated": "2026-03-01"
+          },
+          "chartData": [
+            { "date": "PDF Users", "value": 12, "label": "Cases/Month" },
+            { "date": "UI Users", "value": 28, "label": "Cases/Month" }
+          ],
+          "description": "Correlation between access method and product utilization"
+        },
+        {
+          "id": "customer-cohorts",
+          "question": "Break into customer cohorts: OPIC vs. Hospital, Plaque vs. not, Employed referrers vs. private practice, and volume tiers: low, medium, high CT volume programs",
+          "categoryId": "already-available",
+          "dataStatus": "available",
+          "currentValue": "8 cohorts analyzed",
+          "isMockData": false,
+          "visualizationType": "table",
+          "metadata": {
+            "unit": "cohorts",
+            "trend": "stable",
+            "lastUpdated": "2026-02-28"
+          },
+          "tableData": {
+            "headers": ["Cohort", "Count", "Avg Volume"],
+            "rows": [
+              ["OPIC - High Vol", 45, "120/mo"],
+              ["OPIC - Med Vol", 78, "60/mo"],
+              ["Hospital - High Vol", 34, "150/mo"],
+              ["Hospital - Med Vol", 89, "65/mo"]
+            ]
+          },
+          "description": "Customer segmentation across multiple dimensions"
+        },
+        {
+          "id": "plaque-ur-rates",
+          "question": "What are the Plaque UR rates by disease (stenosis grade or CADRADS)?",
+          "categoryId": "already-available",
+          "dataStatus": "available",
+          "currentValue": "Average 78% UR rate",
+          "isMockData": false,
+          "visualizationType": "bar-chart",
+          "metadata": {
+            "unit": "percentage",
+            "trend": "up",
+            "lastUpdated": "2026-03-01",
+            "notes": "Aaron has this data"
+          },
+          "chartData": [
+            { "date": "CAD-RADS 0", "value": 45, "label": "%" },
+            { "date": "CAD-RADS 1", "value": 68, "label": "%" },
+            { "date": "CAD-RADS 2", "value": 82, "label": "%" },
+            { "date": "CAD-RADS 3", "value": 91, "label": "%" },
+            { "date": "CAD-RADS 4", "value": 96, "label": "%" }
+          ],
+          "description": "Plaque utilization rates across disease severity grades"
+        },
+        {
+          "id": "ffrct-plaque-combo",
+          "question": "What proportion of patients get both FFRCT and Plaque? What is the disease burden of these patients?",
+          "categoryId": "already-available",
+          "dataStatus": "available",
+          "currentValue": "34% get both, avg CAD-RADS 2.8",
+          "isMockData": false,
+          "visualizationType": "percentage",
+          "metadata": {
+            "unit": "percentage",
+            "trend": "up",
+            "lastUpdated": "2026-03-01",
+            "notes": "Aaron has this data"
+          },
+          "chartData": [
+            { "date": "Both", "value": 34, "label": "%" },
+            { "date": "FFR Only", "value": 41, "label": "%" },
+            { "date": "Plaque Only", "value": 25, "label": "%" }
+          ],
+          "description": "Percentage of patients receiving both FFRCT and Plaque analysis"
+        }
+      ]
+    },
+    {
+      "id": "short-term",
+      "name": "Short-term Possibility (1 Month)",
+      "description": "Metrics achievable within the next month",
+      "dataStatus": "short-term",
+      "priority": 2,
+      "icon": "⏱",
+      "metrics": [
+        {
+          "id": "super-users",
+          "question": "Can we define superusers? People who are in the UI nearly every day, interact/view many cases? Is there unique utilization or growth at sites with super users vs. not?",
+          "categoryId": "short-term",
+          "dataStatus": "short-term",
+          "currentValue": "In progress - criteria being defined",
+          "isMockData": true,
+          "visualizationType": "bar-chart",
+          "metadata": {
+            "unit": "users",
+            "trend": "stable",
+            "lastUpdated": "2026-03-02",
+            "notes": "Expected completion: End of March 2026"
+          },
+          "chartData": [
+            { "date": "Sites with Superusers", "value": 85, "label": "% Growth" },
+            { "date": "Sites without", "value": 42, "label": "% Growth" }
+          ],
+          "description": "Impact of power users on site growth and utilization"
+        },
+        {
+          "id": "roadmap-completion",
+          "question": "What percent of patients that do need an FFR or plaque based on the roadmap assessment do get the tests completed?",
+          "categoryId": "short-term",
+          "dataStatus": "short-term",
+          "currentValue": "72% completion rate (sample)",
+          "isMockData": true,
+          "visualizationType": "percentage",
+          "metadata": {
+            "unit": "percentage",
+            "trend": "up",
+            "lastUpdated": "2026-03-02"
+          },
+          "description": "Conversion rate from roadmap recommendation to test completion"
+        },
+        {
+          "id": "plaque-workflow",
+          "question": "How often customers perform plaque right straight from caselist (plaque 'yes/no' visual) vs. run it after viewing roadmap vs. run it after performing FFR? Any impact on attachment rate?",
+          "categoryId": "short-term",
+          "dataStatus": "short-term",
+          "currentValue": "Mixed workflows observed (sample)",
+          "isMockData": true,
+          "visualizationType": "donut-chart",
+          "metadata": {
+            "unit": "percentage",
+            "trend": "stable",
+            "lastUpdated": "2026-03-02"
+          },
+          "chartData": [
+            { "date": "From Caselist", "value": 45, "label": "%" },
+            { "date": "After Roadmap", "value": 35, "label": "%" },
+            { "date": "After FFR", "value": 20, "label": "%" }
+          ],
+          "description": "Plaque ordering workflow patterns and their impact"
+        },
+        {
+          "id": "3d-model-impact",
+          "question": "What are the CCTA, Plaque and FFRCT utilization rate (growth % or n months from golive performance volume) differences between readers who view the FFRCT and Plaque 3D model routinely, and those who don't?",
+          "categoryId": "short-term",
+          "dataStatus": "short-term",
+          "currentValue": "3D viewers show 1.8x growth (sample)",
+          "isMockData": true,
+          "visualizationType": "bar-chart",
+          "metadata": {
+            "unit": "percentage",
+            "trend": "up",
+            "lastUpdated": "2026-03-02"
+          },
+          "chartData": [
+            { "date": "3D Model Users", "value": 89, "label": "% Growth" },
+            { "date": "Non-3D Users", "value": 48, "label": "% Growth" }
+          ],
+          "description": "Impact of 3D model usage on overall utilization"
+        }
+      ]
+    },
+    {
+      "id": "blocked",
+      "name": "Blocked / Need X-functional Support",
+      "description": "Metrics requiring IT, Engineering, or CS team support",
+      "dataStatus": "blocked",
+      "priority": 3,
+      "icon": "⚠",
+      "metrics": [
+        {
+          "id": "user-consistency",
+          "question": "What percent of customers are consistent users (every week) vs. infrequent (every month or quarter) vs. lost (logged in but inactive for 2+ quarters) vs. never active (never completed account)?",
+          "categoryId": "blocked",
+          "dataStatus": "blocked",
+          "blockedReason": {
+            "type": "IT",
+            "description": "Need IT support to pull user activity flag into database",
+            "estimatedEffort": "Medium",
+            "requiredFrom": "IT Database Team"
+          },
+          "currentValue": "Sample: Consistent 42%, Infrequent 31%, Lost 18%, Never 9%",
+          "isMockData": true,
+          "visualizationType": "donut-chart",
+          "metadata": {
+            "unit": "percentage",
+            "trend": "stable",
+            "lastUpdated": "2026-03-02"
+          },
+          "chartData": [
+            { "date": "Consistent", "value": 42, "label": "%" },
+            { "date": "Infrequent", "value": 31, "label": "%" },
+            { "date": "Lost", "value": 18, "label": "%" },
+            { "date": "Never Active", "value": 9, "label": "%" }
+          ],
+          "description": "User engagement patterns and retention metrics"
+        },
+        {
+          "id": "product-usage-percent",
+          "question": "What % of customers use each product?",
+          "categoryId": "blocked",
+          "dataStatus": "blocked",
+          "blockedReason": {
+            "type": "IT",
+            "description": "Need support with enriching user profiles with product usage data",
+            "estimatedEffort": "Small",
+            "requiredFrom": "IT/Marketing Ops"
+          },
+          "currentValue": "Sample: FFR 78%, Plaque 65%, Roadmap 92%",
+          "isMockData": true,
+          "visualizationType": "bar-chart",
+          "metadata": {
+            "unit": "percentage",
+            "trend": "up",
+            "lastUpdated": "2026-03-02"
+          },
+          "chartData": [
+            { "date": "Roadmap", "value": 92, "label": "%" },
+            { "date": "FFRCT", "value": 78, "label": "%" },
+            { "date": "Plaque", "value": 65, "label": "%" }
+          ],
+          "description": "Product adoption rates across customer base"
+        },
+        {
+          "id": "value-add-time",
+          "question": "How much time do customers spend on 'value add' vs 'non-value add' tasks in each product? e.g. wait time on case list, searching for patients vs. interacting with plaque",
+          "categoryId": "blocked",
+          "dataStatus": "blocked",
+          "blockedReason": {
+            "type": "IT",
+            "description": "Need IT support in pulling comprehensive list of events into Tableau dataset",
+            "estimatedEffort": "Large",
+            "requiredFrom": "IT Data Team + Engineering for event tagging"
+          },
+          "currentValue": "Sample: Value-add 65%, Non-value-add 35%",
+          "isMockData": true,
+          "visualizationType": "donut-chart",
+          "metadata": {
+            "unit": "percentage",
+            "trend": "stable",
+            "lastUpdated": "2026-03-02"
+          },
+          "chartData": [
+            { "date": "Value-add Tasks", "value": 65, "label": "%" },
+            { "date": "Non-value-add", "value": 35, "label": "%" }
+          ],
+          "description": "Time allocation between productive and non-productive activities"
+        },
+        {
+          "id": "ui-activity-breakdown",
+          "question": "What is the breakdown of time spent in the clinical UI per activity e.g. load time, caselist navigation, interacting with Roadmap, FFR, Plaque",
+          "categoryId": "blocked",
+          "dataStatus": "blocked",
+          "blockedReason": {
+            "type": "IT",
+            "description": "Need IT support in pulling comprehensive list of events into Tableau dataset",
+            "estimatedEffort": "Large",
+            "requiredFrom": "IT Data Team + Product for event categorization"
+          },
+          "currentValue": "Sample: Loading 15%, Navigation 25%, Analysis 60%",
+          "isMockData": true,
+          "visualizationType": "bar-chart",
+          "metadata": {
+            "unit": "minutes",
+            "trend": "stable",
+            "lastUpdated": "2026-03-02"
+          },
+          "chartData": [
+            { "date": "Analysis", "value": 60, "label": "%" },
+            { "date": "Navigation", "value": 25, "label": "%" },
+            { "date": "Loading", "value": 15, "label": "%" }
+          ],
+          "description": "Detailed breakdown of user time allocation in UI"
+        },
+        {
+          "id": "usage-by-user-type",
+          "question": "Break down of all the above based on user type i.e. IC, gen card, reader (split by card vs. rad)",
+          "categoryId": "blocked",
+          "dataStatus": "blocked",
+          "blockedReason": {
+            "type": "IT",
+            "description": "Need IT/Marketing Ops support in user profile enrichment with role information",
+            "estimatedEffort": "Medium",
+            "requiredFrom": "IT/Marketing Ops"
+          },
+          "currentValue": "Sample: IC 28%, Gen Card 35%, Readers 37%",
+          "isMockData": true,
+          "visualizationType": "donut-chart",
+          "metadata": {
+            "unit": "users",
+            "trend": "stable",
+            "lastUpdated": "2026-03-02"
+          },
+          "chartData": [
+            { "date": "Readers", "value": 37, "label": "%" },
+            { "date": "Gen Card", "value": 35, "label": "%" },
+            { "date": "IC", "value": 28, "label": "%" }
+          ],
+          "description": "User behavior segmented by clinical role"
+        },
+        {
+          "id": "access-by-role",
+          "question": "How often do customers access insights by role? Percent of cases they order viewed in each method? What percent of readers vs. ICs vs. referrers view every case that is relevant to them?",
+          "categoryId": "blocked",
+          "dataStatus": "blocked",
+          "blockedReason": {
+            "type": "IT",
+            "description": "Need IT/Marketing Ops support for role-based analytics enrichment",
+            "estimatedEffort": "Medium",
+            "requiredFrom": "IT/Marketing Ops"
+          },
+          "currentValue": "Sample: Readers 95%, ICs 78%, Referrers 65%",
+          "isMockData": true,
+          "visualizationType": "bar-chart",
+          "metadata": {
+            "unit": "percentage",
+            "trend": "stable",
+            "lastUpdated": "2026-03-02"
+          },
+          "chartData": [
+            { "date": "Readers", "value": 95, "label": "%" },
+            { "date": "ICs", "value": 78, "label": "%" },
+            { "date": "Referrers", "value": 65, "label": "%" }
+          ],
+          "description": "Case viewing completeness by user role"
+        },
+        {
+          "id": "referring-provider-ordering",
+          "question": "What are the ordering rates for referring providers who view the FFRCT and Plaque reports, 3D model routinely?",
+          "categoryId": "blocked",
+          "dataStatus": "blocked",
+          "blockedReason": {
+            "type": "IT",
+            "description": "Need IT to flag users as referring providers in the system",
+            "estimatedEffort": "Small",
+            "requiredFrom": "IT User Management Team"
+          },
+          "currentValue": "Sample: 3D viewers order 2.1x more",
+          "isMockData": true,
+          "visualizationType": "bar-chart",
+          "metadata": {
+            "unit": "orders/month",
+            "trend": "up",
+            "lastUpdated": "2026-03-02"
+          },
+          "chartData": [
+            { "date": "3D Model Users", "value": 21, "label": "Orders" },
+            { "date": "Report Only", "value": 10, "label": "Orders" }
+          ],
+          "description": "Ordering patterns of referring providers based on viewing behavior"
+        },
+        {
+          "id": "tat-access-availability",
+          "question": "% of customers who had access to our analyses (FFR, Roadmap, etc) when they click",
+          "categoryId": "blocked",
+          "dataStatus": "blocked",
+          "blockedReason": {
+            "type": "IT",
+            "description": "Need IT to pull completed timestamp into our dataset for TAT calculation",
+            "estimatedEffort": "Medium",
+            "requiredFrom": "IT Data Engineering"
+          },
+          "currentValue": "Sample: 87% immediate availability",
+          "isMockData": true,
+          "visualizationType": "percentage",
+          "metadata": {
+            "unit": "percentage",
+            "trend": "up",
+            "lastUpdated": "2026-03-02"
+          },
+          "description": "Percentage of users who find results ready upon login"
+        },
+        {
+          "id": "tat-delayed-viewing",
+          "question": "% of customers who run/view our analyses significantly after being available? (i.e. for what % of customers are we 'over-delivering on TAT'?)",
+          "categoryId": "blocked",
+          "dataStatus": "blocked",
+          "blockedReason": {
+            "type": "IT",
+            "description": "Need IT to pull completed timestamp into dataset for delay analysis",
+            "estimatedEffort": "Medium",
+            "requiredFrom": "IT Data Engineering"
+          },
+          "currentValue": "Sample: 42% view within hours, 35% within days",
+          "isMockData": true,
+          "visualizationType": "donut-chart",
+          "metadata": {
+            "unit": "percentage",
+            "trend": "stable",
+            "lastUpdated": "2026-03-02"
+          },
+          "chartData": [
+            { "date": "< 1 hour", "value": 42, "label": "%" },
+            { "date": "1-24 hours", "value": 35, "label": "%" },
+            { "date": "> 24 hours", "value": 23, "label": "%" }
+          ],
+          "description": "Time between result availability and customer viewing"
+        },
+        {
+          "id": "immediate-viewing-impact",
+          "question": "What is the difference between customers who can perform and then view FFRct or Plaque immediately (within a few minutes) vs. those who wait hours/days after roadmap to perform and view? Is there utilization difference?",
+          "categoryId": "blocked",
+          "dataStatus": "blocked",
+          "blockedReason": {
+            "type": "Engineering",
+            "description": "Need Roadmap viewed timestamp in Mixpanel",
+            "estimatedEffort": "Small",
+            "requiredFrom": "Engineering/Product Analytics"
+          },
+          "currentValue": "Sample: Immediate viewers 2.4x utilization",
+          "isMockData": true,
+          "visualizationType": "bar-chart",
+          "metadata": {
+            "unit": "cases/month",
+            "trend": "up",
+            "lastUpdated": "2026-03-02"
+          },
+          "chartData": [
+            { "date": "Immediate", "value": 48, "label": "Cases" },
+            { "date": "Delayed", "value": 20, "label": "Cases" }
+          ],
+          "description": "Impact of viewing delay on product utilization"
+        },
+        {
+          "id": "conditional-orders",
+          "question": "What percent of CCTA orders are placed as conditional orders and what percent of the conditional orders don't get fulfilled by the reader?",
+          "categoryId": "blocked",
+          "dataStatus": "blocked",
+          "blockedReason": {
+            "type": "CS",
+            "description": "Not available on the CS side either - needs new data collection",
+            "estimatedEffort": "Large",
+            "requiredFrom": "CS Data Team + Engineering"
+          },
+          "currentValue": "Sample: 15% conditional, 8% unfulfilled",
+          "isMockData": true,
+          "visualizationType": "percentage",
+          "metadata": {
+            "unit": "percentage",
+            "trend": "stable",
+            "lastUpdated": "2026-03-02"
+          },
+          "chartData": [
+            { "date": "Unconditional", "value": 85, "label": "%" },
+            { "date": "Conditional Fulfilled", "value": 12, "label": "%" },
+            { "date": "Conditional Unfulfilled", "value": 3, "label": "%" }
+          ],
+          "description": "Conditional order patterns and fulfillment rates"
+        }
+      ]
+    },
+    {
+      "id": "low-priority",
+      "name": "Lower Priority / P2",
+      "description": "Metrics deprioritized for now",
+      "dataStatus": "low-priority",
+      "priority": 4,
+      "icon": "⏸",
+      "metrics": [
+        {
+          "id": "frustration-metrics",
+          "question": "Can we define frustration metrics or churn behavior? Do customers give up using the UI at some point? (Many clicks leading to nothing... long wait times and then no orders, etc... failed logins and then no activity) How often does that happen from all user sessions?",
+          "categoryId": "low-priority",
+          "dataStatus": "low-priority",
+          "currentValue": "Not prioritized - complex analysis required",
+          "isMockData": true,
+          "visualizationType": "number",
+          "metadata": {
+            "unit": "sessions",
+            "trend": "stable",
+            "lastUpdated": "2026-03-02",
+            "notes": "Requires sophisticated event tracking and ML pattern detection"
+          },
+          "description": "Detection of user frustration patterns and abandonment behavior"
+        }
+      ]
+    },
+    {
+      "id": "fundamental-limitation",
+      "name": "Fundamental Limitation",
+      "description": "Metrics that are possibly never achievable due to technical constraints",
+      "dataStatus": "fundamental-limitation",
+      "priority": 5,
+      "icon": "⛔",
+      "metrics": [
+        {
+          "id": "ccta-ordering-plaque-correlation",
+          "question": "Does the CCTA ordering rate change when referring providers have plaque access (enabled) vs. no plaque access?",
+          "categoryId": "fundamental-limitation",
+          "dataStatus": "fundamental-limitation",
+          "currentValue": "Not measurable - no CCTA ordering provider tracking",
+          "isMockData": false,
+          "visualizationType": "number",
+          "metadata": {
+            "unit": "N/A",
+            "trend": "stable",
+            "lastUpdated": "2026-03-02",
+            "notes": "No way of knowing the CCTA ordering provider today - fundamental system limitation"
+          },
+          "description": "Impact of plaque access on CCTA ordering behavior - not currently trackable"
+        }
+      ]
+    }
+  ]
+}
